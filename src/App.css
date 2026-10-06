@@ -96,7 +96,27 @@ select:focus-visible {
 .hero {
   background-position: center;
   background-size: cover;
-  transition: background-image 400ms ease;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-background-enter {
+  animation: hero-background-fade 900ms ease both;
+}
+
+@keyframes hero-background-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .brand-name {
