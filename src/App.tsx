@@ -9,6 +9,7 @@ import { LocationSection } from './components/sections/LocationSection'
 import { OfferSection } from './components/sections/OfferSection'
 import { RoomsSection } from './components/sections/RoomsSection'
 import { MobileBottomNav } from './components/layout/MobileBottomNav'
+import { SiteHeader } from './components/layout/SiteHeader'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import './App.css'
@@ -17,7 +18,8 @@ function App() {
   useScrollReveal()
 
   return (
-    <div className="min-h-screen bg-[#f7f5f0] text-[#252822]">
+    <div className="min-h-screen bg-[#f7f5f0] text-[#252822] ">
+      <SiteHeader />
       <HeroSection />
       <main>
         <BookingForm />

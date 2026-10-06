@@ -44,7 +44,6 @@ export function MobileBottomNav() {
     <nav className="mobile-bottom-nav" aria-label="Navigasi utama seluler">
       {items.map(({ href, label, icon: Icon, featured }) => {
         const isActive = activeHref === href
-
         return (
           <a
             className={`mobile-bottom-item${isActive ? ' is-active' : ''}${featured ? ' is-featured' : ''}`}

@@ -1,25 +1,36 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, Crown, Menu, X } from 'lucide-react'
 import { navItems } from '../../data/hotel'
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [IsScrolled,setIsScrolled]=useState(false)
 
+  useEffect(()=>{
+const handleScroll=()=>{
+  setIsScrolled(window.scrollY > 20)
+}
+// mengecek posisi awal
+
+window.addEventListener('scroll',handleScroll)
+return () => window.removeEventListener('scroll',handleScroll)
+  },[])
+  // console.log(IsScrolled)
   return (
-    <header className="hero-header relative z-20 mx-auto flex max-w-[1380px] items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
-      <a className="brand flex items-center gap-2.5" href="#beranda" aria-label="Grand Aruna, beranda">
+    <header className={` hero-header z-20 ${IsScrolled ? "lg:bg-[#FBF9F4] shadow shadow-[rgba(0,0,0,0.18)] text-[#2B2A28]":""} lg:fixed  absolute  left-0 right-0 top-0  transition-colors duration-500 ` }>
+      <div className={` max-w-[1380px]   mx-auto flex items-center justify-between px-5 py-5 sm:px-8 lg:px-12`}>
+          <a className="brand flex items-center gap-2.5" href="#beranda" aria-label="Brand Hotel, beranda">
         <Crown className="h-7 w-7 text-[#c9a66b]" strokeWidth={1.35} />
-        <span className="flex flex-col leading-none">
-          <span className="brand-name">GRAND ARUNA</span>
-          <span className="mt-1 text-[8px] tracking-[.25em] text-white/65">HOTEL & RESORT</span>
+        <span className= {`flex flex-col leading-none  `}>
+          <span className={ `brand-name ${IsScrolled ? "text-[#2B2A28]" : "text-white"} transition-colors duration-500`}>Brand Hotel</span>
+          <span className={`mt-1 text-[8px] tracking-[.25em] ${IsScrolled ? "text-[#2B2A28]" : "text-white/60"}  transition-colors duration-500 `}>HOTEL & RESORT</span>
         </span>
       </a>
-
       <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigasi utama">
         {navItems.map((item) => (
           <a
             key={item.href}
-            className="nav-link text-[11px] font-medium tracking-wide text-white/85 transition-colors hover:text-[#e0bd80]"
+            className={`nav-link text-[15px] font-medium tracking-wide ${IsScrolled ? "text-[#2B2A28]" : "text-white"}  transition-colors duration-500   transition-colors hover:text-[#e0bd80]`}
             href={item.href}
           >
             {item.label}
@@ -32,7 +43,7 @@ export function SiteHeader() {
       </a>
 
       <button
-        className="grid h-10 w-10 place-items-center border border-white/25 text-white lg:hidden"
+        className={`grid h-10 w-10 place-items-center border   ${IsScrolled ? "text-[#2B2A28] border border-black/25" : "text-white border-white/25"} transition-colors duration-500  lg:hidden`}
         type="button"
         aria-label={menuOpen ? 'Tutup menu' : 'Buka menu'}
         aria-expanded={menuOpen}
@@ -58,6 +69,8 @@ export function SiteHeader() {
           </a>
         </nav>
       )}
+      </div>
+    
     </header>
   )
 }

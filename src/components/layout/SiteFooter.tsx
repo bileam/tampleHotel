@@ -9,7 +9,7 @@ export function SiteFooter() {
           <a className="brand inline-flex items-center gap-2.5" href="#beranda">
             <Crown className="h-7 w-7 text-[#c9a66b]" strokeWidth={1.35} />
             <span className="flex flex-col leading-none">
-              <span className="brand-name">GRAND ARUNA</span>
+              <span className="brand-name">BRAND HOTEL</span>
               <span className="mt-1 text-[8px] tracking-[.25em] text-white/55">HOTEL & RESORT</span>
             </span>
           </a>
@@ -36,13 +36,13 @@ export function SiteFooter() {
 
         <div>
           <h3 className="footer-heading">Ikuti Cerita Kami</h3>
-          <p className="mt-4 text-xs leading-5 text-white/55">Momen istimewa dari Grand Aruna, langsung di linimasa Anda.</p>
+          <p className="mt-4 text-xs leading-5 text-white/55">Momen istimewa dari Brand Hotel, langsung di linimasa Anda.</p>
           <a className="mt-4 inline-flex items-center gap-2 text-xs text-[#d5b273] hover:text-white" href="https://instagram.com" target="_blank" rel="noreferrer"><AtSign size={14} /> @grandarunahotel <ArrowUpRight size={12} /></a>
         </div>
       </div>
 
       <div className="mx-auto flex max-w-[1210px] flex-wrap items-center justify-between gap-3 pt-5 text-[10px] text-white/40">
-        <span>© 2025 Grand Aruna Hotel. Hak cipta dilindungi.</span>
+        <span>© 2025 Brand Hotel Hotel</span>
         <div className="flex gap-5"><a className="hover:text-white" href="#beranda">Kebijakan Privasi</a><a className="hover:text-white" href="#beranda">Syarat & Ketentuan</a></div>
       </div>
     </footer>

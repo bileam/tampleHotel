@@ -7,11 +7,11 @@ export function GallerySection() {
 
   return (
     <>
-      <section id="galeri" className="bg-[#f7f5f0] px-5 py-16 sm:px-8 md:py-20">
+      <section id="galeri" className="bg-[#f7f5f0]  px-5 py-16 sm:px-8 md:py-20">
         <div className="mx-auto max-w-[1210px]">
           <div className="flex flex-wrap items-end justify-between gap-4 reveal">
             <div>
-              <p className="eyebrow text-[#a78652]">POTRET GRAND ARUNA</p>
+              <p className="eyebrow text-[#a78652]">POTRET BRAND HOTEL</p>
               <h2 className="section-title mt-2">Momen yang berkesan</h2>
             </div>
             <span className="hidden items-center gap-2 text-[10px] uppercase tracking-[.16em] text-[#77766f] sm:flex">Geser untuk melihat <ArrowRight size={13} /></span>
@@ -36,7 +36,7 @@ export function GallerySection() {
 
       {selectedPhoto && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={selectedPhoto.alt} onClick={() => setSelectedPhoto(null)}>
-          <button className="lightbox-close" type="button" aria-label="Tutup foto" onClick={() => setSelectedPhoto(null)}><X size={22} /></button>
+          <button className="lightbox-close z-50" type="button" aria-label="Tutup foto" onClick={() => setSelectedPhoto(null)}><X size={22} /></button>
           <img src={selectedPhoto.src} alt={selectedPhoto.alt} onClick={(event) => event.stopPropagation()} />
           <p>{selectedPhoto.alt}</p>
         </div>

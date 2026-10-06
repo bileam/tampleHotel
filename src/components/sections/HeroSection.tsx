@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import { heroSlides } from '../../data/hotel'
-import { SiteHeader } from '../layout/SiteHeader'
 
 export function HeroSection() {
   const [activeSlide, setActiveSlide] = useState(0)
@@ -10,14 +9,12 @@ export function HeroSection() {
   return (
     <section
       id="beranda"
-      className="hero relative isolate min-h-[680px] bg-[#15201d] text-white sm:min-h-[720px]"
+      className="hero relative  isolate min-h-[680px] bg-[#15201d] text-white sm:min-h-[720px]"
       style={{
         backgroundImage: `linear-gradient(90deg, rgba(12, 18, 18, .72) 0%, rgba(12, 18, 18, .35) 48%, rgba(12, 18, 18, .12) 100%), linear-gradient(0deg, rgba(8, 14, 13, .5), transparent 45%), url('${slide.image}')`,
       }}
     >
-      <SiteHeader />
-
-      <div className="relative z-10 mx-auto flex min-h-[530px] max-w-[1380px] items-center px-6 pb-24 pt-10 sm:px-12 lg:min-h-[560px] lg:px-24">
+      <div className="relative pt-25 z-10 mx-auto flex min-h-[530px] max-w-[1380px] items-center px-6 pb-24 pt-10 sm:px-12 lg:min-h-[560px] lg:px-24">
         <div className="hero-copy max-w-[590px] pb-10">
           <p className="eyebrow mb-4 text-[#dfc18e]">{slide.eyebrow}</p>
           <h1 className="display-title max-w-[580px] text-[clamp(3rem,7vw,5.8rem)] leading-[.91] text-white">
@@ -32,7 +29,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-[94px] left-6 z-10 hidden flex-col gap-3 md:flex lg:left-12">
+      <div className="absolute bottom-[94px]  left-6 z-10 hidden flex-col gap-3 md:flex lg:left-12">
         {heroSlides.map((item, index) => (
           <button
             key={item.eyebrow}

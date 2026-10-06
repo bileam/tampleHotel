@@ -13,7 +13,7 @@ export const heroSlides = [
   {
     image:
       'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2400&q=90',
-    eyebrow: 'SELAMAT DATANG DI GRAND ARUNA',
+    eyebrow: 'SELAMAT DATANG DI Brand Hotel',
     title: 'Ruang untuk',
     emphasis: 'beristirahat.',
     description:
@@ -57,7 +57,7 @@ export const rooms = [
     detail: 'King bed',
   },
   {
-    name: 'Grand Suite',
+    name: 'Brand Suite',
     price: '2.600.000',
     image:
       'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1100&q=85',
@@ -84,7 +84,7 @@ export const gallery = [
   },
   {
     src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85',
-    alt: 'Hidangan di restoran Grand Aruna',
+    alt: 'Hidangan di restoran Brand Hotel',
   },
   {
     src: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=85',
