@@ -3,7 +3,7 @@ import { rooms } from '../../data/hotel'
 
 export function RoomsSection() {
   return (
-    <section id="kamar" className="bg-[#efede7] px-5 py-16 sm:px-8 md:py-20">
+    <section id="kamar" className="bg-[#efede7] lg:h-screen px-5 py-16 sm:px-8 md:py-20">
       <div className="mx-auto max-w-[1210px]">
         <div className="section-heading reveal text-center">
           <p className="eyebrow text-[#a78652]">ISTIRAHAT DENGAN GAYA</p>

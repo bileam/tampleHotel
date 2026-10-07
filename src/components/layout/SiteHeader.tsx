@@ -15,7 +15,7 @@ const handleScroll=()=>{
 window.addEventListener('scroll',handleScroll)
 return () => window.removeEventListener('scroll',handleScroll)
   },[])
-  // console.log(IsScrolled)
+ 
   return (
     <header className={` hero-header z-20 ${IsScrolled ? "lg:bg-[#FBF9F4] shadow shadow-[rgba(0,0,0,0.18)] text-[#2B2A28]":""} lg:fixed  absolute  left-0 right-0 top-0  transition-colors duration-500 ` }>
       <div className={` max-w-[1380px]   mx-auto flex items-center justify-between px-5 py-5 sm:px-8 lg:px-12`}>

@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react'
 
 export function DiningSection() {
   return (
-    <section id="dining" className="mx-auto grid max-w-[1210px] items-center gap-8 px-5 py-16 sm:px-8 md:grid-cols-2 md:gap-12 md:py-20 lg:gap-16">
+    <section id="dining" className="mx-auto grid max-w-[1210px] lg:h-screen items-center gap-8 px-5 py-16 sm:px-8 md:grid-cols-2 md:gap-12 md:py-20 lg:gap-16">
       <div className="order-2 max-w-[500px] reveal md:order-1 md:py-5">
         <p className="eyebrow text-[#a78652]">PENGALAMAN KULINER</p>
         <h2 className="section-title mt-3">Hidangan yang <em>menyatukan.</em></h2>
